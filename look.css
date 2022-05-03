@@ -1,0 +1,89 @@
+body {
+  background: #EEE;
+  font-family: sans-serif;
+}
+
+.drawbar {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch
+}
+
+span {
+  margin-left: 20px;
+}
+
+label {
+  display: block;
+  text-align: center;
+  line-height: 150%;
+  /* font-size: .85em; */
+}
+
+.drawbarInput {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 4;
+  justify-content: center;
+}
+
+.drawbarLables {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 4;
+  justify-content: center;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch
+}
+
+.keyboard_black{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 4;
+  justify-content: center;
+}
+
+.keyboard_white{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 4;
+  justify-content: center;
+}
+
+
+.keyboard_octave{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 4;
+  justify-content: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #eee;
+    background: #121212;
+  }
+
+  body a {
+    color: #809fff;
+  }
+}
+
+
+
+#lowerBars{
+  accent-color: #bb0000;
+}
+
+#whiteBars{
+  accent-color: #eee;
+}
+
+#blackBars{
+  accent-color: #002eac;
+}
+

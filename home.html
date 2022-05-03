@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+  
+
+<div class="drawbars">
+  <div class="drawbarInput" id="drawbarInput">
+    <!-- Drawbars for the Organ -->
+    <span id="lowerBars">
+      <input type="range" id="sixteen" name="sixteenSlider" value="0" min="0" max="1" step="0.01" orient="vertical">
+    </span>
+
+    <span id="lowerBars">
+      <input type="range" id="five_thirteen" name="five_thirteenSlider" value="0" min="0" max="1" step="0.01" orient="vertical">
+    </span>
+
+    <span id="whiteBars">
+      <input type="range" id="eight" name="eightSlider" value="0" min="0" max="1" step="0.01" orient="vertical">
+    </span>
+
+    <span id="whiteBars">
+        <input type="range" id="four" name="fourSlider" value="0" min="0" max="1" step="0.01" orient="vertical">
+    </span>
+
+    <span id="blackBars">
+      <input type="range" id="two_two_three" name="two_two_threeSlider" value="0" min="0" max="1" step="0.01" orient="vertical">
+    </span>
+
+    <span id="whiteBars">
+      <input type="range" id="two" name="twoSlider" value="0" min="0" max="1" step="0.01" orient="vertical">
+    </span>
+
+    <span id="blackBars">
+      <input type="range" id="one_three_five" name="one_three_fiveSlider" value="0" min="0" max="1" step="0.01" orient="vertical">
+    </span>
+
+    <span id="blackBars">
+      <input type="range" id="one_third" name="one_thirdSlider" value="0" min="0" max="1" step="0.01" orient="vertical">
+    </span>
+
+    <span id="whiteBars">
+      <input type="range" id="one" name="oneSlider" value="0" min="0" max="1" step="0.01" orient="vertical">
+    </span>
+</div>
+  <div class="drawbarLables">
+    <!-- Lables for Organ -->
+    <span>
+      <label for="sixteenSlider">16'</label>
+    </span>
+
+    <span>
+      <label for="five_thirteenSlider">5 <sup>1</sup>&frasl;<sub>3</sub>'</label>
+    </span>
+
+    <span>
+      <label for="eightSlider">8'</label>
+    </span>
+
+    <span>
+      <label for="fourSlider">4'</label>
+    </span>
+
+    <span>
+      <label for="two_two_three">2 <sup>2</sup>&frasl;<sub>3</sub>'</label>
+    </span>
+
+    <span>
+      <label for="twoSlider">2'</label>
+    </span>
+
+    <span>
+      <label for="one_three_fiveSlider">1 <sup>3</sup>&frasl;<sub>5</sub>'</label>
+    </span>
+
+    <span>
+      <label for="one_thirdSlider">1 <sup>1</sup>&frasl;<sub>3</sub>'</label>
+    </span>
+
+    <span>
+      <label for="oneSlider">1'</label>
+    </span>
+  </div>
+</div>
+
+
+
+<div class="keyboard">
+  <div class="keyboard_black">
+    <button type="button" id="CSharp"> C# </button>
+    <button type="button" id="DSharp"> D# </button>
+    <button type="button" id="FSharp"> F# </button>
+    <button type="button" id="GSharp"> G# </button>
+    <button type="button" id="ASharp"> A# </button>
+  </div>
+  <div class="keyboard_white">
+    <button type="button" id="CB"> C </button>
+    <button type="button" id="DB"> D </button>
+    <button type="button" id="EB"> E </button>
+    <button type="button" id="FB"> F </button>
+    <button type="button" id="GB"> G </button>
+    <button type="button" id="AB"> A </button>
+    <button type="button" id="BB"> B </button>
+    <button type="button" id="CBt"> C </button>
+  </div>
+  <div class="keyboard_octave">
+    <button type="button" id="octup"> UP </button>
+    <button type="button" id="octdn"> DN </button>
+  </div>
+</div>
+
+
+<head> 
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="look.css">
+</head>
+</html>
+
