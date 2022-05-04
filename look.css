@@ -3,6 +3,31 @@ body {
   font-family: sans-serif;
 }
 
+input[type=range][orient=vertical] {
+  -webkit-appearance: slider-vertical;
+  width: 16px;
+  height: 175px;
+  padding: 0 5px;
+}
+
+.vertical {
+  width: 175px;  
+  height: 16px;
+  transform: rotate(-90deg);
+  transform-origin: left;
+  position: absolute;
+  left: 50%;
+  bottom: -1em;
+}
+
+.vertical-wrapper {
+  display: inline-block;
+  width: 16px;
+  height: 175px;
+  position: relative;
+  padding: 0 5px;
+}
+
 .drawbar {
   display: flex;
   flex-direction: column;
@@ -72,8 +97,6 @@ label {
     color: #809fff;
   }
 }
-
-
 
 #lowerBars{
   accent-color: #bb0000;
