@@ -92,7 +92,13 @@ const audioCtx = new AudioContext();
         audioCtx.createOscillator()
     ];
 
-    let tremolo = audioCtx.createOscillator();
+    //Let Tremolo Work
+    var tremoloOsc = audioCtx.createOscillator();
+    var tremoloGain = audioCtx.createGain();
+    var tremOscGain = audioCtx.createGain();
+    tremoloOsc.frequency.value = 5;
+    tremOscGain.gain.value = 0.3;
+    tremoloOsc.connect(tremOscGain);
 
     let octaveList = [
         document.querySelector('#octup'),
@@ -102,7 +108,7 @@ const audioCtx = new AudioContext();
    octaveList[0].addEventListener("mousedown", octaveUp, false);
    octaveList[1].addEventListener("mousedown", octaveDn, false);
 
-    let oscFreqList = [0.5, 1.5, 1, 2, 2.5, 3, 3.25, 3.5, 4];
+    let oscFreqList = [0.5, 1, 1.498823530, 2, 2.997647060, 4, 5.040941178, 5.995294120, 8];
     let keyFreqList = [
         32.70, 
         34.65, 
@@ -136,13 +142,21 @@ const audioCtx = new AudioContext();
         keyboardList[i].addEventListener("mouseup", noteReleased, false);
     }
 
+    var convolver = audioCtx.createConvolver();
+
     //Create Graph
     for (var i = 0; i < 9; i++){
         oscList[i].type = "sine";
         oscList[i].start();
         oscList[i].connect(gainList[i]).connect(masterGain);
-        masterGain.connect(audioCtx.destination)
     }
+
+    //Set all to Master Gain
+    tremoloOsc.connect(tremoloGain.gain);
+    masterGain.connect(tremoloGain);
+    tremoloOsc.start();
+    tremoloGain.connect(audioCtx.destination);
+
 
     //Octave Switch
     function octaveUp(event){
