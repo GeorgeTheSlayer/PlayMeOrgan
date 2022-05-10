@@ -11,7 +11,6 @@ var envTime = 0.06;
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 
-
     //Create gain Nodes
     let gainList = [
         audioCtx.createGain(),
@@ -40,7 +39,6 @@ const audioCtx = new AudioContext();
         document.querySelector('#one_three_five'),
         document.querySelector('#one_third'),
         document.querySelector('#one')
-        
     ];
 
     //Create Keys to Be watched and Configed
@@ -124,6 +122,8 @@ const audioCtx = new AudioContext();
         61.74,
         65.41
     ];
+
+    //Wavetable Osc
 
     //Function to set Osc Freqs
     function setFreq(_freqs){
